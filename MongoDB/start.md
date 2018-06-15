@@ -71,7 +71,7 @@ mongod -port 27017 -dbpath /usr/local/mongo/data
 mongo
 ```
 
-#### 명령어들  
+#### 기본 명령어들  
 
 - DB 목록 출력  
 ```
