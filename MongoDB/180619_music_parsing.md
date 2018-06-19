@@ -660,3 +660,61 @@ public class MusicServiceImple implements MusicService {
 }
 
 ```
+
+- MusicController.java
+
+```java
+package com.sist.music.controller;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.google.gson.*;
+import com.sist.music.domain.MusicVO;
+import com.sist.music.service.MusicService;
+
+@Controller
+public class MusicController {
+	
+	Logger log = LoggerFactory.getLogger(this.getClass());
+	
+	@Autowired
+	private MusicService musicService;
+	
+	@RequestMapping(value = "do_selectList.do", method = RequestMethod.GET,
+			 produces="application/json;charset=UTF-8")
+	@ResponseBody
+	public String do_selectList() {
+		List<MusicVO> list = musicService.do_selectList();
+		
+		// List -> Json
+		JsonArray arr = new JsonArray();
+		for(MusicVO vo : list) {
+			JsonObject music = new JsonObject();
+			music.addProperty("rank", vo.getRank());
+			music.addProperty("title", vo.getTitle());
+			music.addProperty("state",vo.getState());
+			music.addProperty("singer", vo.getSinger());
+			music.addProperty("poster", vo.getPoster());
+			music.addProperty("key", vo.getKey());
+			music.addProperty("id", vo.getId());
+			
+			arr.add(music);
+		}
+		
+		Gson gson = new Gson();
+		String json = gson.toJson(arr);
+		log.debug("***" + json);
+		return json;
+		
+	}
+
+}
+```
