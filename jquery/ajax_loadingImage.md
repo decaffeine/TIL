@@ -18,7 +18,7 @@ $("#loadingImage").show();
 $.ajax({
   	type:"GET",
 		async: false,
-		url:"/summer/finrec/saving/doSelectList.do",
+		url:"...",
 		dataType:"html",
 		data:null,
  		success:function(data){//성공
