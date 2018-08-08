@@ -35,7 +35,7 @@ docker version
 1. Ubuntu 16.04  
 ```
 docker run ubuntu:16.04
-docker run —rm -it ubuntu 16.04 /bin/bash
+docker run —-rm -it ubuntu:16.04 /bin/bash
 
 cat /etc/environment
 ls
