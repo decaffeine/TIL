@@ -1,4 +1,4 @@
-2장
+2장 첫 번째 스프링 부트 애플리케이션 개발하기
 
 - H2DB?
     - 자바  기반 오픈소스 RDBMS
@@ -13,6 +13,8 @@
 ```
 spring init -d=web,thymeleaf,data-jpa,h2 --groupId=com.manning --artifactId=readingList --name="Reading List" --package-name=readingList --description="Reading List Demo" --build gradle readingList
 ```
+
+---
 
 ### 갓 초기화한 스프링 부트 프로젝트
 cf. bootstrap은 사전적으로 ‘예비 명령에 의해 프로그램을 로드하는 방법’이란 뜻이 있다.
