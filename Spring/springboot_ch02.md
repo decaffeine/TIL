@@ -115,5 +115,5 @@ server.port=8000
 
 
 ### References
-    - [H2DB](http://dololak.tistory.com/285)
+- [H2DB](http://dololak.tistory.com/285)
 	
