@@ -6,7 +6,7 @@ ubuntu 16.04 환경 (superuser)
 
 도커로 띄울 때는
 ```
-docker run —rm -it ubuntu:16.04 /bin/bash
+docker run —-rm -it ubuntu:16.04 /bin/bash
 ```
 
 #### wget과 git을 설치
