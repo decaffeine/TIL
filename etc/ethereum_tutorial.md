@@ -43,9 +43,9 @@ cp go-ethereum/build/bin/geth /usr/bin
 ```
 
 #### 테스트 네트워크 구축
-로컬 환경에서 이용 가능한 옵션을 사용
---networkid [네트워크 식별자] --datadir [워크 파일이 저장될 디렉토리] 
---olympic (테스트 네트워크 사용) --console (콘솔 모드)
+로컬 환경에서 이용 가능한 옵션을 사용  
+--networkid [네트워크 식별자] --datadir [워크 파일이 저장될 디렉토리]   
+--olympic (테스트 네트워크 사용) --console (콘솔 모드)  
 
 ```
 mkdir eth_data
@@ -169,7 +169,3 @@ eth.getBalance(eth.accounts[1])
 ```
 1000000000000000000
 ```
-
-
-#### Contract를 사용한 샘플 개발  
-
